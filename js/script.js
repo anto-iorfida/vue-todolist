@@ -17,6 +17,8 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            newTask:'' ,
+            
             tasks :[
                 {
                     text : 'Fare la spesa al conad',
@@ -24,7 +26,7 @@ createApp({
                 },
                 {
                     text : 'Aggiornare il progetto sezione a',
-                    done : false
+                    done : true
                 },
                 {
                     text : 'Rilassarsi ore 7 pm',
@@ -40,5 +42,10 @@ createApp({
         toggleTodo(index) {
             this.tasks[index].done = !this.tasks[index].done;
           },
+        addTodo(){
+            
+            this.tasks.push({text:this.newTask, done : false});
+            this.newTask = ''
+        }
     }
 }).mount('#app');

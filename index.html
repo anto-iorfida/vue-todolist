@@ -18,8 +18,8 @@
       </header>
       <main>
          <div class="input-group">
-            <input type="text" placeholder="aggiungi task">
-            <button>Aggiungi</button>
+            <input type="text" placeholder="aggiungi task" v-model="newTask">
+            <button @click="addTodo">Aggiungi</button>
          </div>
          <div v-for="(task , index) in tasks" class="template-tasks">
             <div @click="toggleTodo(index)" class="single-task">
