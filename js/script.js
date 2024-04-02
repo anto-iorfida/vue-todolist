@@ -40,8 +40,12 @@ createApp({
         deleteItem(indexDelete){
             this.tasks.splice(indexDelete,1)
         },
-        toggleTodo(index) {
-            this.tasks[index].done = !this.tasks[index].done;
+        toggleTodo(task) {
+            const cerchTask = this.tasks.find(indexSelect => indexSelect == task);
+            if (cerchTask) {
+              cerchTask.done = !cerchTask.done;
+            }
+            // this.tasks.done = !this.tasks.done;
           },
         addTodo(){
            

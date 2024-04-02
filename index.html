@@ -23,8 +23,8 @@
             <p v-if="errorLength " class="error">Errore, inserire almeno 5 lettere</p>
          </div>
          <div v-for="(task , index) in tasks" class="template-tasks">
-            <div @click="toggleTodo(index)" class="single-task">
-               <p :class="{'linear-todo': task.done == true}" >{{task.text}}</p>
+            <div @click="toggleTodo(task)" class="single-task">
+               <p :class="{'linear-todo': task.done}" >{{task.text}}</p>
                <span @click="deleteItem(index)">
                   <i class="fa-solid fa-x"></i>
                </span>
