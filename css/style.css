@@ -28,7 +28,7 @@ header img {
 }
 
 /* TASK */
-.tasks{
+.template-tasks{
     max-width: 500px;
     margin: 0 auto;
     background-color: rgba(219, 219, 219, 0.807);
@@ -40,5 +40,8 @@ header img {
     display: flex;
     justify-content: space-between;
     margin: 8px 0;
+}
+.single-task i {
+    cursor: pointer;
 }
 

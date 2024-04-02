@@ -21,10 +21,12 @@
             <input type="text" placeholder="aggiungi task">
             <button>Aggiungi</button>
          </div>
-         <div class="tasks">
+         <div v-for="(task , index) in tasks" class="template-tasks">
             <div class="single-task">
-               <p>test</p>
-               <i class="fa-solid fa-x"></i>
+               <p>{{task.text}}</p>
+               <span @click="deleteItem(index)">
+                  <i class="fa-solid fa-x"></i>
+               </span>
             </div>
            
          </div>
