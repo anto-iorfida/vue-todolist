@@ -48,7 +48,7 @@ createApp({
             if (this.newTask.length < 5) { 
                 this.errorLength = true; 
               } else {
-                this.tasks.push({ text: this.newTask, done: false });
+                this.tasks.unshift({ text: this.newTask, done: false });
                 this.newTask = '';
                 this.errorLength = false; 
               }
