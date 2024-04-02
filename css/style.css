@@ -44,4 +44,7 @@ header img {
 .single-task i {
     cursor: pointer;
 }
+.linear-todo{
+    text-decoration: line-through;
+}
 

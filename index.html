@@ -22,8 +22,8 @@
             <button>Aggiungi</button>
          </div>
          <div v-for="(task , index) in tasks" class="template-tasks">
-            <div class="single-task">
-               <p>{{task.text}}</p>
+            <div @click="toggleTodo(index)" class="single-task">
+               <p :class="{'linear-todo': task.done == true}" >{{task.text}}</p>
                <span @click="deleteItem(index)">
                   <i class="fa-solid fa-x"></i>
                </span>

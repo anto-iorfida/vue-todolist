@@ -36,6 +36,9 @@ createApp({
     methods: {
         deleteItem(indexDelete){
             this.tasks.splice(indexDelete,1)
-        }
+        },
+        toggleTodo(index) {
+            this.tasks[index].done = !this.tasks[index].done;
+          },
     }
 }).mount('#app');
