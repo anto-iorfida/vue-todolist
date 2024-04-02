@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*------------ 
+    HEADER
+-------------*/
+
+.container-logo{
+    padding: 10px;
+    text-align: center;
+}
+
+header img {
+    height: 50px;
+}
+
+/*------------ 
+    MAIN
+-------------*/
+.input-group *{
+    margin: 14px;
+}
+.input-group {
+    text-align: center;
+}
+
+/* TASK */
+.tasks{
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: rgba(219, 219, 219, 0.807);
+    padding: 14px;
+    color: black;
+}
+.single-task{
+    border-bottom: 1px solid lightslategray;
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+}
+

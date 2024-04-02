@@ -17,7 +17,20 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            
+            tasks :[
+                {
+                    text : 'Fare la spesa al conad',
+                    done : false
+                },
+                {
+                    text : 'Aggiornare il progetto sezione a',
+                    done : false
+                },
+                {
+                    text : 'Rilassarsi ore 7 pm',
+                    done : false
+                }
+            ]
         };
     },
     methods: {
