@@ -18,8 +18,9 @@
       </header>
       <main>
          <div class="input-group">
-            <input type="text" placeholder="aggiungi task" v-model="newTask">
+            <input type="text" placeholder="aggiungi task" v-model="newTask" @keyup.enter="addTodo">
             <button @click="addTodo">Aggiungi</button>
+            <p v-if="errorLength " class="error">Errore, inserire almeno 5 lettere</p>
          </div>
          <div v-for="(task , index) in tasks" class="template-tasks">
             <div @click="toggleTodo(index)" class="single-task">

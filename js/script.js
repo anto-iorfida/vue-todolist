@@ -32,7 +32,8 @@ createApp({
                     text : 'Rilassarsi ore 7 pm',
                     done : false
                 }
-            ]
+            ],
+            errorLength: false,
         };
     },
     methods: {
@@ -43,9 +44,14 @@ createApp({
             this.tasks[index].done = !this.tasks[index].done;
           },
         addTodo(){
-            
-            this.tasks.push({text:this.newTask, done : false});
-            this.newTask = ''
+           
+            if (this.newTask.length < 5) { 
+                this.errorLength = true; 
+              } else {
+                this.tasks.push({ text: this.newTask, done: false });
+                this.newTask = '';
+                this.errorLength = false; 
+              }
         }
     }
 }).mount('#app');
